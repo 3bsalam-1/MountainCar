@@ -1,4 +1,4 @@
-name: automatic PR
+name: Automatic PR
 
 on:
   push:
