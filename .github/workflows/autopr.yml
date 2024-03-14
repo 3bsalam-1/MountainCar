@@ -18,17 +18,17 @@ jobs:
       - name: Update author information
         run: echo ${{ env.GIT_COMMIT_AUTHOR_NAME }} > AUTHOR
 
-      - name: Raise PR 1
+      - name: Raise First PR
         id: demo-1
         uses: peter-evans/create-pull-request@v3
         with:
-          branch: "auto-pr-branch1"
+          branch: "PR-Bot1"
           base: main
-          title: "demo for auto pr1"
+          title: "Pull Request."
           committer: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
           author: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
           body:
-            This is to show automatic PR creation
+            Pull Request.
           token: ${{ secrets.GITHUB_TOKEN }}
           delete-branch: true
 
@@ -48,17 +48,17 @@ jobs:
       - name: Update author information again
         run: echo Gaurav > AUTHOR
 
-      - name: Raise PR 2
+      - name: Raise Second PR
         id: demo-2
         uses: peter-evans/create-pull-request@v3
         with:
-          branch: "auto-pr-branch2"
+          branch: "PR-Bot2"
           base: main
-          title: "demo for auto pr2"
+          title: "Pull Request.."
           committer: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
           author: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
           body:
-            This is to show automatic PR creation
+            Pull Request..
           token: ${{ secrets.GITHUB_TOKEN }}
           delete-branch: true
 
