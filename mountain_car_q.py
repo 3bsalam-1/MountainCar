@@ -78,6 +78,6 @@ def run(episodes, is_training=True, render=False):
     plt.savefig(f'mountain_car.png')
 
 if __name__ == '__main__':
-    run(5000, is_training=True, render=True)
+    #run(5000, is_training=True, render=True)
 
-    #run(10, is_training=False, render=True)
+    run(10, is_training=False, render=True)
