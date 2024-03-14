@@ -4,7 +4,7 @@ on:
 
   push:
     branches:
-      - master
+      - main
       
   schedule:
   - cron: "1 * * * *" # See https://crontab.guru/#0_7,9,11_*_*_1,3
@@ -50,5 +50,6 @@ jobs:
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.6.0
         with:
+          branch: main
           directory: "."
           github_token: ${{ secrets.GITHUB_TOKEN }}
