@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-  - cron: "1 * * * *" # See https://crontab.guru/#0_7,9,11_*_*_1,3
+  - cron: "59 11 * * *" # See https://crontab.guru/#0_7,9,11_*_*_1,3
 jobs:
   updateAuthor:
     runs-on: ubuntu-latest
