@@ -7,7 +7,7 @@ on:
       - main
       
   schedule:
-  - cron: "1 * * * *" # See https://crontab.guru/#0_7,9,11_*_*_1,3
+  - cron: "1 * * * *" 
 
 jobs:
   auto_commit:
@@ -32,16 +32,16 @@ jobs:
           git config --local user.name "3bsalam-1"
           git add -A
           
-          arr[0]="chore(bot): 😂 auto commit"
-          arr[1]="chore(bot): 😱 auto commit"
-          arr[2]="chore(bot): 👿 auto commit"
-          arr[3]="chore(bot): 💩 auto commit"
-          arr[4]="chore(bot): 🙏 auto commit"
-          arr[5]="chore(bot): 🙈 auto commit"
-          arr[6]="chore(bot): 🐐 auto commit"
-          arr[7]="chore(bot): 🤖 auto commit"
-          arr[8]="chore(bot): 🟩 auto commit"
-          arr[9]="chore(bot): 👻 auto commit"
+          arr[0]="Update.."
+          arr[1]="Update LAST_UPDATED file"
+          arr[2]="Update LAST_UPDATED .."
+          arr[3]="Update LAST_UPDATED file .."
+          arr[4]="LAST_UPDATED file.."
+          arr[5]="Update LAST_UPDATED"
+          arr[6]="LAST_UPDATED file"
+          arr[7]="LAST_UPDATED"
+          arr[8]="LAST_UPDATED.."
+          arr[9]="Update LAST_UPDATED file..."
           
           rand=$[$RANDOM % ${#arr[@]}]
           
