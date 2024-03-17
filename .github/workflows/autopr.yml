@@ -1,11 +1,12 @@
-name: Automatic PR
+name: create automatic PR
 
 on:
   push:
     branches:
       - main
   schedule:
-  - cron: "59 11 * * *" # See https://crontab.guru/#0_7,9,11_*_*_1,3
+  - cron: "1 * * * *"
+
 jobs:
   updateAuthor:
     runs-on: ubuntu-latest
@@ -19,11 +20,11 @@ jobs:
       - name: Update author information
         run: echo ${{ env.GIT_COMMIT_AUTHOR_NAME }} > AUTHOR
 
-      - name: Raise First PR
+      - name: Raise PR 1
         id: demo-1
         uses: peter-evans/create-pull-request@v3
         with:
-          branch: "PR-Bot1"
+          branch: "PR-Bot"
           base: main
           title: "Pull Request."
           committer: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
@@ -47,9 +48,9 @@ jobs:
           method: squash
 
       - name: Update author information again
-        run: echo Gaurav > AUTHOR
+        run: echo 3bsalam-1 > AUTHOR
 
-      - name: Raise Second PR
+      - name: Raise PR 2
         id: demo-2
         uses: peter-evans/create-pull-request@v3
         with:
