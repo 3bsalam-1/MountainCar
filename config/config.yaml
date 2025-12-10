@@ -1,0 +1,27 @@
+# MountainCar Q-Learning Configuration
+
+# Training Parameters
+training:
+  episodes: 5000
+  max_steps: 1000
+  num_bins: 20
+  render: false
+  print_interval: 100
+
+# Q-Learning Hyperparameters
+hyperparameters:
+  learning_rate: 0.9      # Alpha (α)
+  discount_factor: 0.9    # Gamma (γ)
+  epsilon: 1.0            # Initial exploration rate
+  epsilon_decay: auto     # Auto-calculated based on episodes
+  min_epsilon: 0.0        # Minimum exploration rate
+
+# Evaluation Parameters
+evaluation:
+  episodes: 10
+  render: true
+
+# File Paths
+paths:
+  model_save: models/mountain_car.pkl
+  plot_save: outputs/plots/training_progress.png

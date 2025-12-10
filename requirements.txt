@@ -1,0 +1,3 @@
+gymnasium>=0.29.0
+numpy>=1.24.0
+matplotlib>=3.7.0
