@@ -33,10 +33,6 @@ ENV/
 *.swo
 *~
 
-# Project specific
-models/*.pkl
-outputs/
-*.png
 
 # Jupyter Notebook
 .ipynb_checkpoints
