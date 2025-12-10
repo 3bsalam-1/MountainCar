@@ -2,7 +2,7 @@
 
 A professional, modular reinforcement learning implementation that solves the classic **MountainCar-v0** environment from OpenAI Gymnasium using **Q-Learning** algorithm.
 
-![MountainCar Training Progress](outputs\plots\training_progress.png)
+![MountainCar Training Progress](outputs/plots/training_progress.png)
 
 ## 📋 Overview
 
